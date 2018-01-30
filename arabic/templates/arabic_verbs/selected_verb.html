@@ -1,0 +1,19 @@
+{% if conjugation_list %}
+
+<h1>Conjugations of the verb "{{ verb }}"</h1>
+    <h2>Pronoun:أنا</h2>
+    <ul>
+        {% for v in ana_conjugation %}
+        <li>{{ v.arabic_spelling }} / {{ v.mood }} / {{ v.en_meaning }}</li>
+        {% endfor %}
+    </ul>
+    <h2>Pronoun:انتَ</h2>
+    <ul>
+        {% for v in anta_conjugation %}
+        <li>{{ v.arabic_spelling }} / {{ v.mood }} / {{ v.en_meaning }}</li>
+        {% endfor %}
+    </ul>
+
+{% else %}
+    <p>there's no conjugations</p>
+{% endif %}

@@ -1,0 +1,11 @@
+<h1>Select a verb to practice</h1>
+
+{% if arabic_verb_list %}
+    <ul style="list-style-type: decimal">
+        {% for verb in arabic_verb_list %}
+        <li><a href="/arabic/verbs/{{ verb.arabic_spelling }}/">{{ verb.arabic_spelling }}:{{ verb.en_meaning }}</a></li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>there's no verbs.</p>
+{% endif %}
